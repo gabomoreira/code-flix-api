@@ -24,9 +24,9 @@ export default class UpdateCategoryValidator {
    *    ```
    */
   public schema = schema.create({
-    name: schema.string.optional({trim: true}, ),
-    description: schema.string.optional({trim: true}, ),
-    isActive: schema.boolean.optional(),
+    name: schema.string.optional({ trim: true }),
+    description: schema.string.optional({ trim: true }),
+    is_active: schema.boolean.optional(),
   })
 
   /**
