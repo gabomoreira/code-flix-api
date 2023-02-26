@@ -1,1 +1,3 @@
-import './Category'
+import './category'
+import './user'
+import './auth'
