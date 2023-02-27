@@ -1,4 +1,5 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
+import { roleItemsTypes } from 'App/Controllers/@Types/roleItemsTypes'
 
 export default class extends BaseSchema {
   protected tableName = 'users'
@@ -8,6 +9,7 @@ export default class extends BaseSchema {
       table.uuid('id').primary()
       table.string('email', 255).notNullable().unique()
       table.string('username', 255).notNullable().unique()
+      table.enu('role', roleItemsTypes).notNullable().defaultTo('CUSTOMER')
       table.string('password', 180).notNullable()
       table.string('remember_me_token').nullable()
 

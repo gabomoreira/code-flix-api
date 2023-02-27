@@ -2,6 +2,7 @@ import { DateTime } from 'luxon'
 import Hash from '@ioc:Adonis/Core/Hash'
 import { column, beforeSave, BaseModel, beforeCreate } from '@ioc:Adonis/Lucid/Orm'
 import { v4 } from 'uuid'
+import { RoleType } from 'App/Controllers/@Types/roleItemsTypes'
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -12,6 +13,9 @@ export default class User extends BaseModel {
 
   @column()
   public username: string
+
+  @column()
+  public role: RoleType
 
   @column({ serializeAs: null })
   public password: string
